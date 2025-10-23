@@ -39,7 +39,7 @@ const projectsData = [
         image: null,
         tags: ['Open Banking', 'API', 'Security', 'FinTech'],
         category: ['web', 'typescript'],
-        github: 'https://github.com/nuts-foundation',
+        github: 'https://github.com/kpankpa/nuts',
         demo: null,
         featured: true
     },
