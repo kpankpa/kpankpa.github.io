@@ -10,7 +10,7 @@ const projectsData = window.projectsData || [
         title: 'WACCI Marketplace',
         description: 'A comprehensive seed and agricultural marketplace application built with Flutter. Features include product listings, secure payments, and farmer-buyer connections.',
         longDescription: 'WACCI Marketplace is a mobile application designed to connect farmers with buyers in the agricultural sector. Built with Flutter and Dart, it provides a seamless platform for trading seeds and agricultural products. The app features a modern UI, real-time updates, secure payment integration, and user authentication.',
-        image: 'asserts/pic/WACCI_screenshot.jpg',
+        image: '/asserts/pic/WACCI_screenshot.jpg',
         tags: ['Flutter', 'Dart', 'Mobile', 'E-commerce'],
         category: ['flutter', 'mobile'],
         github: 'https://github.com/kpankpa/WACCI',
@@ -29,7 +29,7 @@ const projectsData = window.projectsData || [
         title: 'FirstBank CMS',
         description: 'Content Management System developed with TypeScript for efficient content organization and management. Features modern UI and robust backend architecture.',
         longDescription: 'FirstBank CMS is a modern content management system built with TypeScript. It provides a powerful interface for managing digital content with features like version control, user permissions, and a flexible content structure. The system is designed for scalability and ease of use.',
-        image: 'asserts/pic/CMS.png',
+        image: '/asserts/pic/CMS.png',
         tags: ['TypeScript', 'Web', 'CMS', 'Full-Stack'],
         category: ['typescript', 'web'],
         github: 'https://github.com/kpankpa/firstbank-CMS',
@@ -68,7 +68,7 @@ const projectsData = window.projectsData || [
         description: 'A carpooling application designed to facilitate ride-sharing among employees. Features MVP architecture for scalability, real-time ride matching, route optimization, and cost splitting.',
         longDescription: 'First Pool is a mobile carpooling application built with Flutter that enables employees to share rides efficiently. The app follows the MVP (Model-View-Presenter) architecture pattern for clean code separation and testability. It includes real-time ride matching algorithms, route optimization using Google Maps API, automated cost calculation and splitting, and a rating system for drivers and passengers.',
         image: null,
-        video: 'videos/firstpool_tut.mp4', // Add your video file here
+        video: '/videos/firstpool_tut.mp4', // Add your video file here
         tags: ['Flutter', 'MVP', 'Mobile', 'Ride-sharing'],
         category: ['flutter', 'mobile'],
         github: null,
