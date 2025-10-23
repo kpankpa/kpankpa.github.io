@@ -1,7 +1,13 @@
 // Contact Form Validation and Submission
 // Using FormSubmit for email delivery
 
+import { initPagePreloading, initPageTransitions } from './utils.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize page enhancements
+    initPagePreloading();
+    initPageTransitions();
+    
     const contactForm = document.getElementById('contactForm');
     
     if (!contactForm) return;

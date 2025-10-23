@@ -1,6 +1,6 @@
 // Main JavaScript for index.html
 
-import { initScrollAnimations, animateCounter, typeWriter } from './utils.js';
+import { initScrollAnimations, animateCounter, typeWriter, initPagePreloading, initPageTransitions } from './utils.js';
 import { 
     init3DTilt, 
     initSmoothReveal, 
@@ -244,6 +244,12 @@ function initializeAnimations() {
     
     // Animate gradient orbs
     animateGradientOrbs();
+    
+    // Initialize page preloading
+    initPagePreloading();
+    
+    // Initialize page transitions
+    initPageTransitions();
 }
 
 // Export projects data for use in other files

@@ -294,3 +294,57 @@ export function parseMarkdown(text) {
         .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
         .replace(/\n/g, '<br>');
 }
+
+// Preload pages on hover for instant navigation
+export function initPagePreloading() {
+    const preloadedPages = new Set();
+    
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            const url = link.href;
+            
+            // Only preload if not already preloaded
+            if (!preloadedPages.has(url)) {
+                preloadedPages.add(url);
+                
+                // Create a link element for preloading
+                const preloadLink = document.createElement('link');
+                preloadLink.rel = 'prefetch';
+                preloadLink.href = url;
+                document.head.appendChild(preloadLink);
+                
+                console.log('Preloaded:', url);
+            }
+        });
+    });
+}
+
+// Page transition animations
+export function initPageTransitions() {
+    // Add fade-out effect when clicking internal links
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            
+            // Skip if it's the current page or has target="_blank"
+            if (link.target === '_blank' || href === window.location.pathname) {
+                return;
+            }
+            
+            e.preventDefault();
+            
+            // Add fade-out class to body
+            document.body.classList.add('page-transitioning');
+            
+            // Navigate after animation
+            setTimeout(() => {
+                window.location.href = href;
+            }, 300);
+        });
+    });
+    
+    // Add fade-in effect on page load
+    window.addEventListener('load', () => {
+        document.body.classList.add('page-loaded');
+    });
+}

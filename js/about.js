@@ -1,5 +1,6 @@
 // About page JavaScript
 
+import { initPagePreloading, initPageTransitions } from './utils.js';
 import { initSmoothReveal, initScrollProgress } from './animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,4 +48,6 @@ function initializeNavigation() {
 function initializeAnimations() {
     initSmoothReveal();
     initScrollProgress();
+    initPagePreloading();
+    initPageTransitions();
 }

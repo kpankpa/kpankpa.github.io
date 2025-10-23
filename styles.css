@@ -76,6 +76,28 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    opacity: 1;
+    transition: opacity var(--transition-base);
+}
+
+/* Page transition states */
+body.page-transitioning {
+    opacity: 0;
+}
+
+body.page-loaded {
+    animation: fadeIn var(--transition-base) ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===================================

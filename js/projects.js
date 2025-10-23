@@ -1,6 +1,6 @@
 // Projects page JavaScript
 
-import { initScrollAnimations } from './utils.js';
+import { initScrollAnimations, initPagePreloading, initPageTransitions } from './utils.js';
 import { init3DTilt, initSmoothReveal, initScrollProgress } from './animations.js';
 
 // Get projects data from main.js or define locally
@@ -381,4 +381,6 @@ function initializeAnimations() {
     initSmoothReveal();
     init3DTilt();
     initScrollProgress();
+    initPagePreloading();
+    initPageTransitions();
 }
