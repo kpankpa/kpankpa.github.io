@@ -159,7 +159,7 @@ function loadFeaturedProjects() {
             const projectId = parseInt(card.dataset.projectId);
             const project = projectsData.find(p => p.id === projectId);
             if (project) {
-                window.location.href = `projects.html?id=${projectId}`;
+                window.location.href = `/projects/?id=${projectId}`;
             }
         });
     });
